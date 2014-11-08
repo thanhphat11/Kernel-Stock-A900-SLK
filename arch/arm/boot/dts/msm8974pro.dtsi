@@ -1776,8 +1776,12 @@
 	/* Updated chip ID */
 	qcom,chipid = <0x03030002>;
 	qcom,msm-bus,num-cases = <15>;
+<<<<<<< HEAD
 	qcom,bus-control;
 	qcom,initial-pwrlevel = <3>;
+=======
+	qcom,initial-pwrlevel = <5>;
+>>>>>>> ef7f9de... Add GPU OC up to 644 MHz and idle on 27MHz
 
 	/* Updated bus bandwidth requirements */
 	qcom,msm-bus,vectors-KBps =
@@ -1820,36 +1824,60 @@
 
                qcom,gpu-pwrlevel@0 {
                        reg = <0>;
+<<<<<<< HEAD
                        qcom,gpu-freq = <657500000>;
+=======
+                       qcom,gpu-freq = <644000000>;
+>>>>>>> ef7f9de... Add GPU OC up to 644 MHz and idle on 27MHz
                        qcom,bus-freq = <14>;
                        qcom,io-fraction = <101>;
                };
 
                qcom,gpu-pwrlevel@1 {
                        reg = <1>;
+<<<<<<< HEAD
                        qcom,gpu-freq = <578000000>;
                        qcom,bus-freq = <14>;
+=======
+                       qcom,gpu-freq = <518000000>;
+                       qcom,bus-freq = <11>;
+>>>>>>> ef7f9de... Add GPU OC up to 644 MHz and idle on 27MHz
                        qcom,io-fraction = <101>;
                };
 
                qcom,gpu-pwrlevel@2 {
                        reg = <2>;
+<<<<<<< HEAD
                        qcom,gpu-freq = <462400000>;
                        qcom,bus-freq = <11>;
+=======
+                       qcom,gpu-freq = <402000000>;
+                       qcom,bus-freq = <8>;
+>>>>>>> ef7f9de... Add GPU OC up to 644 MHz and idle on 27MHz
                        qcom,io-fraction = <101>;
                };
 
                qcom,gpu-pwrlevel@3 {
                        reg = <3>;
+<<<<<<< HEAD
                        qcom,gpu-freq = <389000000>;
                        qcom,bus-freq = <8>;
+=======
+                       qcom,gpu-freq = <336000000>;
+                       qcom,bus-freq = <5>;
+>>>>>>> ef7f9de... Add GPU OC up to 644 MHz and idle on 27MHz
                        qcom,io-fraction = <101>;
                };
 
                qcom,gpu-pwrlevel@4 {
                        reg = <4>;
+<<<<<<< HEAD
                        qcom,gpu-freq = <330000000>;
                        qcom,bus-freq = <5>;
+=======
+                       qcom,gpu-freq = <220000000>;
+                       qcom,bus-freq = <2>;
+>>>>>>> ef7f9de... Add GPU OC up to 644 MHz and idle on 27MHz
                        qcom,io-fraction = <101>;
                };
 
