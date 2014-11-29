@@ -1778,6 +1778,7 @@
 	qcom,msm-bus,num-cases = <15>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	qcom,bus-control;
 	qcom,initial-pwrlevel = <3>;
 =======
@@ -1786,6 +1787,9 @@
 =======
 	qcom,initial-pwrlevel = <3>;
 >>>>>>> parent of ef7f9de... Add GPU OC up to 644 MHz and idle on 27MHz
+=======
+	qcom,initial-pwrlevel = <7>;
+>>>>>>> 37ef0dd... GPU: OC to 657MHz, Idle on 27MHz and add 100MHz Step
 
 	/* Updated bus bandwidth requirements */
 	qcom,msm-bus,vectors-KBps =
@@ -1830,6 +1834,7 @@
                        reg = <0>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                        qcom,gpu-freq = <657500000>;
 =======
                        qcom,gpu-freq = <644000000>;
@@ -1837,12 +1842,16 @@
 =======
                        qcom,gpu-freq = <578000000>;
 >>>>>>> parent of ef7f9de... Add GPU OC up to 644 MHz and idle on 27MHz
+=======
+                       qcom,gpu-freq = <657500000>;
+>>>>>>> 37ef0dd... GPU: OC to 657MHz, Idle on 27MHz and add 100MHz Step
                        qcom,bus-freq = <14>;
                        qcom,io-fraction = <101>;
                };
 
                qcom,gpu-pwrlevel@1 {
                        reg = <1>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                        qcom,gpu-freq = <578000000>;
@@ -1854,11 +1863,16 @@
 >>>>>>> parent of ef7f9de... Add GPU OC up to 644 MHz and idle on 27MHz
                        qcom,bus-freq = <11>;
 >>>>>>> ef7f9de... Add GPU OC up to 644 MHz and idle on 27MHz
+=======
+                       qcom,gpu-freq = <578000000>;
+                       qcom,bus-freq = <14>;
+>>>>>>> 37ef0dd... GPU: OC to 657MHz, Idle on 27MHz and add 100MHz Step
                        qcom,io-fraction = <101>;
                };
 
                qcom,gpu-pwrlevel@2 {
                        reg = <2>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                        qcom,gpu-freq = <462400000>;
@@ -1870,11 +1884,16 @@
 >>>>>>> parent of ef7f9de... Add GPU OC up to 644 MHz and idle on 27MHz
                        qcom,bus-freq = <8>;
 >>>>>>> ef7f9de... Add GPU OC up to 644 MHz and idle on 27MHz
+=======
+                       qcom,gpu-freq = <462400000>;
+                       qcom,bus-freq = <11>;
+>>>>>>> 37ef0dd... GPU: OC to 657MHz, Idle on 27MHz and add 100MHz Step
                        qcom,io-fraction = <101>;
                };
 
                qcom,gpu-pwrlevel@3 {
                        reg = <3>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                        qcom,gpu-freq = <389000000>;
@@ -1886,11 +1905,16 @@
 >>>>>>> parent of ef7f9de... Add GPU OC up to 644 MHz and idle on 27MHz
                        qcom,bus-freq = <5>;
 >>>>>>> ef7f9de... Add GPU OC up to 644 MHz and idle on 27MHz
+=======
+                       qcom,gpu-freq = <389000000>;
+                       qcom,bus-freq = <8>;
+>>>>>>> 37ef0dd... GPU: OC to 657MHz, Idle on 27MHz and add 100MHz Step
                        qcom,io-fraction = <101>;
                };
 
                qcom,gpu-pwrlevel@4 {
                        reg = <4>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                        qcom,gpu-freq = <330000000>;
@@ -1902,6 +1926,10 @@
 >>>>>>> parent of ef7f9de... Add GPU OC up to 644 MHz and idle on 27MHz
                        qcom,bus-freq = <2>;
 >>>>>>> ef7f9de... Add GPU OC up to 644 MHz and idle on 27MHz
+=======
+                       qcom,gpu-freq = <330000000>;
+                       qcom,bus-freq = <5>;
+>>>>>>> 37ef0dd... GPU: OC to 657MHz, Idle on 27MHz and add 100MHz Step
                        qcom,io-fraction = <101>;
                };
 
@@ -1915,7 +1943,11 @@
                qcom,gpu-pwrlevel@6 {
                        reg = <6>;
                        qcom,gpu-freq = <100000000>;
+<<<<<<< HEAD
                        qcom,bus-freq = <2>;
+=======
+                       qcom,bus-freq = <1>;
+>>>>>>> 37ef0dd... GPU: OC to 657MHz, Idle on 27MHz and add 100MHz Step
                        qcom,io-fraction = <101>;
                };
 
