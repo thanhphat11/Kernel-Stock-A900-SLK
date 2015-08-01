@@ -1,5 +1,4 @@
 
-#include "atmel_mxt_fw30.h"
 #include <linux/switch.h>
 
 /* -------------------------------------------------------------------- */
@@ -589,7 +588,7 @@ static spt_cteconfig_t46_config_t obj_cte_config_t46[TOUCH_MODE_MAX_NUM] = {
 	{
 		.ctrl          = 4,	 /* T46_CTRL */						/*Reserved */
 		.reserved_0    = 0,	 /* T46_RESERVED	*/				/*0: 16X14Y, 1: 17X13Y, 2: 18X12Y, 3: 19X11Y, 4: 20X10Y, 5: 21X15Y, 6: 22X8Y, */
-		.idlesyncsperx = 32,  /* T46_IDLESYNCSPERX */				
+		.idlesyncsperx = 24,  /* T46_IDLESYNCSPERX */				
 		.actvsyncsperx = 52, /* T46_ACTVSYNCSPERX */				
 		.adcspersync   = 0,  /* T46_ADCSPERSYNC */				
 		.pulsesperadc  = 0,  /* T46_PULSESPERADC */				/*0:1  1:2   2:3   3:4 pulses */
@@ -601,7 +600,7 @@ static spt_cteconfig_t46_config_t obj_cte_config_t46[TOUCH_MODE_MAX_NUM] = {
 		.ctrl          = 4,	 /* T46_CTRL */						/*Reserved */
 		.reserved_0    = 0,	 /* T46_RESERVED	*/				/*0: 16X14Y, 1: 17X13Y, 2: 18X12Y, 3: 19X11Y, 4: 20X10Y, 5: 21X15Y, 6: 22X8Y, */
 		.idlesyncsperx = 24,  /* T46_IDLESYNCSPERX */				
-		.actvsyncsperx = 32, /* T46_ACTVSYNCSPERX */				
+		.actvsyncsperx = 40, /* T46_ACTVSYNCSPERX */				
 		.adcspersync   = 0,  /* T46_ADCSPERSYNC */				
 		.pulsesperadc  = 0,  /* T46_PULSESPERADC */				/*0:1  1:2   2:3   3:4 pulses */
 		.xslew         = 4,  /* T46_XSLEW */					// 1   *0:500nsec,  1:350nsec */
@@ -827,7 +826,7 @@ static proci_shieldless_t56_config_t obj_slim_sensor_t56[TOUCH_MODE_MAX_NUM] = {
 		.ctrl  		 = 3,  /* T56_CTRL */									//0
 		.reserved_0  = 0,  /* T56_RESERVED */							    
 		.optint		 = 1,  /* T56_OPTINT */						        //ymlee
-		.inttime     = 75, /* T56_INTTIME */							    
+		.inttime     = 60, /* T56_INTTIME */							    
 		.intdelay0	 = 5,  /* T56_INTDELAY0 */						        
 		.intdelay1	 = 5,  /* T56_INTDELAY1 */						        
 		.intdelay2	 = 5,  /* T56_INTDELAY2 */						        
@@ -1141,23 +1140,23 @@ static spt_dynamicconfigurationcontroller_t70_config_t obj_dynamic_config_contro
 	{
 		{
 			.ctrl      = 3,		/* T70-0_CTRL */		
-			.event     = 23,	/* T70-0_EVENT */		
+			.event     = 24,	/* T70-0_EVENT */		
 			.objtype   = 100,	/* T70-0_OBJTYPE */	
 			.reserved_0= 0,		/* T70-0_RESERVED */	
 			.objinst   = 0,		/* T70-0_OBJINST */	
-			.dstoffset = 30,		/* T70-0_DSTOFFSET */	
+			.dstoffset = 7,		/* T70-0_DSTOFFSET */	
 			.srcoffset = 0,		/* T70-0_SRCOFFSET */	
-			.length    = 2,		/* T70-0_LENGTH */			    
+			.length    = 5,		/* T70-0_LENGTH */			    
 		},
 		{
 			.ctrl      = 3,		/* T70-1_CTRL */		
-			.event     = 25,	/* T70-1_EVENT */		
+			.event     = 26,	/* T70-1_EVENT */		
 			.objtype   = 100,	/* T70-1_OBJTYPE */	
 			.reserved_0= 0,		/* T70-1_RESERVED */	
 			.objinst   = 0,		/* T70-1_OBJINST */	
-			.dstoffset = 30,		/* T70-1_DSTOFFSET */	
+			.dstoffset = 7,		/* T70-1_DSTOFFSET */	
 			.srcoffset = 0,		/* T70-1_SRCOFFSET */	
-			.length    = 2,		/* T70-1_LENGTH */			    
+			.length    = 5,		/* T70-1_LENGTH */			    
 		},
 		{
 			.ctrl      = 3,		/* T70-2_CTRL */		
@@ -1165,9 +1164,9 @@ static spt_dynamicconfigurationcontroller_t70_config_t obj_dynamic_config_contro
 			.objtype   = 100,	/* T70-2_OBJTYPE */	
 			.reserved_0= 0,		/* T70-2_RESERVED */	
 			.objinst   = 0,		/* T70-2_OBJINST */	
-			.dstoffset = 30,		/* T70-2_DSTOFFSET */	
-			.srcoffset = 3,		/* T70-2_SRCOFFSET */	
-			.length    = 2,		/* T70-2_LENGTH */			    
+			.dstoffset = 7,		/* T70-2_DSTOFFSET */	
+			.srcoffset = 6,		/* T70-2_SRCOFFSET */	
+			.length    = 5,		/* T70-2_LENGTH */			    
 		},
 		{
 			.ctrl      = 0,		/* T70-3_CTRL */		
@@ -1224,23 +1223,23 @@ static spt_dynamicconfigurationcontroller_t70_config_t obj_dynamic_config_contro
 	{
 		{
 			.ctrl      = 3,		/* T70-0_CTRL */		
-			.event     = 23,	/* T70-0_EVENT */		
+			.event     = 24,	/* T70-0_EVENT */		
 			.objtype   = 100,	/* T70-0_OBJTYPE */	
 			.reserved_0= 0,		/* T70-0_RESERVED */	
 			.objinst   = 0,		/* T70-0_OBJINST */	
-			.dstoffset = 30,		/* T70-0_DSTOFFSET */	
+			.dstoffset = 7,		/* T70-0_DSTOFFSET */	
 			.srcoffset = 0,		/* T70-0_SRCOFFSET */	
-			.length    = 2,		/* T70-0_LENGTH */			    
+			.length    = 5,		/* T70-0_LENGTH */			    
 		},
 		{
 			.ctrl      = 3,		/* T70-1_CTRL */		
-			.event     = 25,	/* T70-1_EVENT */		
+			.event     = 26,	/* T70-1_EVENT */		
 			.objtype   = 100,	/* T70-1_OBJTYPE */	
 			.reserved_0= 0,		/* T70-1_RESERVED */	
 			.objinst   = 0,		/* T70-1_OBJINST */	
-			.dstoffset = 30,		/* T70-1_DSTOFFSET */	
+			.dstoffset = 7,		/* T70-1_DSTOFFSET */	
 			.srcoffset = 0,		/* T70-1_SRCOFFSET */	
-			.length    = 2,		/* T70-1_LENGTH */			    
+			.length    = 5,		/* T70-1_LENGTH */			    
 		},
 		{
 			.ctrl      = 3,		/* T70-2_CTRL */		
@@ -1248,9 +1247,9 @@ static spt_dynamicconfigurationcontroller_t70_config_t obj_dynamic_config_contro
 			.objtype   = 100,	/* T70-2_OBJTYPE */	
 			.reserved_0= 0,		/* T70-2_RESERVED */	
 			.objinst   = 0,		/* T70-2_OBJINST */	
-			.dstoffset = 30,		/* T70-2_DSTOFFSET */	
-			.srcoffset = 3,		/* T70-2_SRCOFFSET */	
-			.length    = 2,		/* T70-2_LENGTH */			    
+			.dstoffset = 7,		/* T70-2_DSTOFFSET */	
+			.srcoffset = 6,		/* T70-2_SRCOFFSET */	
+			.length    = 5,		/* T70-2_LENGTH */			    
 		},
 		{
 			.ctrl      = 0,		/* T70-3_CTRL */		
@@ -1307,23 +1306,23 @@ static spt_dynamicconfigurationcontroller_t70_config_t obj_dynamic_config_contro
 	{
 		{
 			.ctrl      = 3,		/* T70-0_CTRL */		
-			.event     = 23,	/* T70-0_EVENT */		
+			.event     = 24,	/* T70-0_EVENT */		
 			.objtype   = 100,	/* T70-0_OBJTYPE */	
 			.reserved_0= 0,		/* T70-0_RESERVED */	
 			.objinst   = 0,		/* T70-0_OBJINST */	
-			.dstoffset = 30,		/* T70-0_DSTOFFSET */	
+			.dstoffset = 7,		/* T70-0_DSTOFFSET */	
 			.srcoffset = 0,		/* T70-0_SRCOFFSET */	
-			.length    = 2,		/* T70-0_LENGTH */			    
+			.length    = 5,		/* T70-0_LENGTH */			    
 		},
 		{
 			.ctrl      = 3,		/* T70-1_CTRL */		
-			.event     = 25,	/* T70-1_EVENT */		
+			.event     = 26,	/* T70-1_EVENT */		
 			.objtype   = 100,	/* T70-1_OBJTYPE */	
 			.reserved_0= 0,		/* T70-1_RESERVED */	
 			.objinst   = 0,		/* T70-1_OBJINST */	
-			.dstoffset = 30,		/* T70-1_DSTOFFSET */	
+			.dstoffset = 7,		/* T70-1_DSTOFFSET */	
 			.srcoffset = 0,		/* T70-1_SRCOFFSET */	
-			.length    = 2,		/* T70-1_LENGTH */			    
+			.length    = 5,		/* T70-1_LENGTH */			    
 		},
 		{
 			.ctrl      = 3,		/* T70-2_CTRL */		
@@ -1331,9 +1330,9 @@ static spt_dynamicconfigurationcontroller_t70_config_t obj_dynamic_config_contro
 			.objtype   = 100,	/* T70-2_OBJTYPE */	
 			.reserved_0= 0,		/* T70-2_RESERVED */	
 			.objinst   = 0,		/* T70-2_OBJINST */	
-			.dstoffset = 30,		/* T70-2_DSTOFFSET */	
-			.srcoffset = 3,		/* T70-2_SRCOFFSET */	
-			.length    = 2,		/* T70-2_LENGTH */			    
+			.dstoffset = 7,		/* T70-2_DSTOFFSET */	
+			.srcoffset = 6,		/* T70-2_SRCOFFSET */	
+			.length    = 5,		/* T70-2_LENGTH */			    
 		},
 		{
 			.ctrl      = 0,		/* T70-3_CTRL */		
@@ -1476,50 +1475,50 @@ static spt_dynamicconfigurationcontainer_t71_config_t obj_dynamic_config_contain
 {
 	//	Mode - 0
 	{
-		.data[0] = 150,		/* T71-Data [0]*/
-		.data[1] = 40,		/* T71-Data [1]*/
-		.data[2] = 120,		/* T71-Data [2]*/
-		.data[3] = 80,		/* T71-Data [3]*/
-		.data[4] = 15,		/* T71-Data [4]*/
-		.data[5] = 40,		/* T71-Data [5]*/
-		.data[6] = 0,		/* T71-Data [6]*/
+		.data[0] = 128,		/* T71-Data [0]*/
+		.data[1] = 0,		/* T71-Data [1]*/
+		.data[2] = 30,		/* T71-Data [2]*/
+		.data[3] = 0,		/* T71-Data [3]*/
+		.data[4] = 0,		/* T71-Data [4]*/
+		.data[5] = 0,		/* T71-Data [5]*/
+		.data[6] = 136,		/* T71-Data [6]*/
 		.data[7] = 0,		/* T71-Data [7]*/
-		.data[8] = 0,		/* T71-Data [8]*/
+		.data[8] = 30,		/* T71-Data [8]*/
 		.data[9] = 0,		/* T71-Data [9]*/
-		.data[10] = 0,		/* T71-Data [10]*/
-		.data[11] = 0,	/* T71-Data [11]*/
+		.data[10] = 10,		/* T71-Data [10]*/
+		.data[11] = 10,	/* T71-Data [11]*/
 		.data[12] = 0,		/* T71-Data [12]*/
 	},	
 	//	Mode - 1
 	{
-		.data[0] = 150,		/* T71-Data [0]*/
-		.data[1] = 40,		/* T71-Data [1]*/
-		.data[2] = 120,		/* T71-Data [2]*/
-		.data[3] = 56,		/* T71-Data [3]*/
-		.data[4] = 14,		/* T71-Data [4]*/
-		.data[5] = 25,		/* T71-Data [5]*/
-		.data[6] = 0,		/* T71-Data [6]*/
+		.data[0] = 128,		/* T71-Data [0]*/
+		.data[1] = 0,		/* T71-Data [1]*/
+		.data[2] = 30,		/* T71-Data [2]*/
+		.data[3] = 0,		/* T71-Data [3]*/
+		.data[4] = 0,		/* T71-Data [4]*/
+		.data[5] = 0,		/* T71-Data [5]*/
+		.data[6] = 136,		/* T71-Data [6]*/
 		.data[7] = 0,		/* T71-Data [7]*/
-		.data[8] = 0,		/* T71-Data [8]*/
+		.data[8] = 30,		/* T71-Data [8]*/
 		.data[9] = 0,		/* T71-Data [9]*/
-		.data[10] = 0,		/* T71-Data [10]*/
-		.data[11] = 0,	/* T71-Data [11]*/
+		.data[10] = 10,		/* T71-Data [10]*/
+		.data[11] = 10,	/* T71-Data [11]*/
 		.data[12] = 0,		/* T71-Data [12]*/
 	},
 	//	Mode - 2
 	{
-		.data[0] = 150,		/* T71-Data [0]*/
-		.data[1] = 40,		/* T71-Data [1]*/
-		.data[2] = 120,		/* T71-Data [2]*/
-		.data[3] = 120,		/* T71-Data [3]*/
-		.data[4] = 30,		/* T71-Data [4]*/
-		.data[5] = 50,		/* T71-Data [5]*/
-		.data[6] = 0,		/* T71-Data [6]*/
+		.data[0] = 128,		/* T71-Data [0]*/
+		.data[1] = 0,		/* T71-Data [1]*/
+		.data[2] = 30,		/* T71-Data [2]*/
+		.data[3] = 0,		/* T71-Data [3]*/
+		.data[4] = 0,		/* T71-Data [4]*/
+		.data[5] = 0,		/* T71-Data [5]*/
+		.data[6] = 136,		/* T71-Data [6]*/
 		.data[7] = 0,		/* T71-Data [7]*/
-		.data[8] = 0,		/* T71-Data [8]*/
+		.data[8] = 30,		/* T71-Data [8]*/
 		.data[9] = 0,		/* T71-Data [9]*/
-		.data[10] = 0,		/* T71-Data [10]*/
-		.data[11] = 0,	/* T71-Data [11]*/
+		.data[10] = 10,		/* T71-Data [10]*/
+		.data[11] = 10,	/* T71-Data [11]*/
 		.data[12] = 0,		/* T71-Data [12]*/
 	},	
 	//	Mode - 3
@@ -1566,11 +1565,11 @@ static procg_noisesuppression_t72_config_t obj_mxt_charger_t72[TOUCH_MODE_MAX_NU
 		.blknlthr       = 0,   /* T72_BLKNLTHR */		
 		.reserved_2     = 0,   /* T72_RESERVED */		
 		.stabctrl       = 0,   /* T72_STABCTRL */		
-		.stabfreq_0     = 2,  /* T72_STABFREQ_0 */	
-		.stabfreq_1     = 4,  /* T72_STABFREQ_1 */	
-		.stabfreq_2     = 5, /* T72_STABFREQ_2 */	
-		.stabfreq_3     = 7,  /* T72_STABFREQ_3 */	
-		.stabfreq_4     = 11, /* T72_STABFREQ_4 */	
+		.stabfreq_0     = 5,  /* T72_STABFREQ_0 */	
+		.stabfreq_1     = 24,  /* T72_STABFREQ_1 */	
+		.stabfreq_2     = 35, /* T72_STABFREQ_2 */	
+		.stabfreq_3     = 41,  /* T72_STABFREQ_3 */	
+		.stabfreq_4     = 51, /* T72_STABFREQ_4 */	
 		.stabtchapx_0   = 32,  /* T72_STABTCHAPX_0 */	
 		.stabtchapx_1   = 32,  /* T72_STABTCHAPX_1 */	
 		.stabtchapx_2   = 32,  /* T72_STABTCHAPX_2 */	
@@ -1585,42 +1584,42 @@ static procg_noisesuppression_t72_config_t obj_mxt_charger_t72[TOUCH_MODE_MAX_NU
 		.reserved_4     = 0,   /* T72_STABLOWNLTHR */		
 		.stabhighnlthr  = 12,   /* T72_STABHIGHNLTHR */	
 		.reserved_5     = 0,  /* T72_STABCNT */		
-		.noisctrl       = 1,  /* T72_NOISCTRL */		
-		.noisfreq_0     = 2,  /* T72_NOISFREQ_0 */	
-		.noisfreq_1     = 3,  /* T72_NOISFREQ_1 */	
+		.noisctrl       = 15,  /* T72_NOISCTRL */		
+		.noisfreq_0     = 1,  /* T72_NOISFREQ_0 */	
+		.noisfreq_1     = 2,  /* T72_NOISFREQ_1 */	
 		.noisfreq_2     = 5, /* T72_NOISFREQ_2 */	
 		.noisfreq_3     = 6,  /* T72_NOISFREQ_3 */	
 		.noisfreq_4     = 7, /* T72_NOISFREQ_4 */	
-		.noistchapx_0   = 63,  /* T72_NOISTCHAPX_0 */	
-		.noistchapx_1   = 63,  /* T72_NOISTCHAPX_1 */	
-		.noistchapx_2   = 63,  /* T72_NOISTCHAPX_2 */	
-		.noistchapx_3   = 63,  /* T72_NOISTCHAPX_3 */	
-		.noistchapx_4   = 63,  /* T72_NOISTCHAPX_4 */	
+		.noistchapx_0   = 52,  /* T72_NOISTCHAPX_0 */	
+		.noistchapx_1   = 52,  /* T72_NOISTCHAPX_1 */	
+		.noistchapx_2   = 52,  /* T72_NOISTCHAPX_2 */	
+		.noistchapx_3   = 52,  /* T72_NOISTCHAPX_3 */	
+		.noistchapx_4   = 52,  /* T72_NOISTCHAPX_4 */	
 		.noisnotchapx_0 = 52,  /* T72_NOISNOTCHAPX_0 */
 		.noisnotchapx_1 = 52,  /* T72_NOISNOTCHAPX_1 */
 		.noisnotchapx_2 = 52,  /* T72_NOISNOTCHAPX_2 */
 		.noisnotchapx_3 = 52,  /* T72_NOISNOTCHAPX_3 */
 		.noisnotchapx_4 = 52,   /* T72_NOISNOTCHAPX_4 */
 		.reserved_6     = 0,   /* T72_NOISPC */		
-		.noislownlthr   = 5,   /* T72_NOISLOWNLTHR */	
+		.noislownlthr   = 8,   /* T72_NOISLOWNLTHR */	
 		.noishighnlthr  = 18,  /* T72_NOISHIGHNLTHR */	
 		.noiscnt        = 0,   /* T72_NOISCNT */		
-		.vnoictrl       = 1,  /* T72_VNOICTRL */		
-		.vnoifreq_0     = 3,  /* T72_VNOIFREQ_0 */	
-		.vnoifreq_1     = 5,  /* T72_VNOIFREQ_1 */	
-		.vnoifreq_2     = 7, /* T72_VNOIFREQ_2 */	
-		.vnoifreq_3     = 9,  /* T72_VNOIFREQ_3 */	
-		.vnoifreq_4     = 11, /* T72_VNOIFREQ_4 */	
+		.vnoictrl       = 15,  /* T72_VNOICTRL */		
+		.vnoifreq_0     = 11,  /* T72_VNOIFREQ_0 */	
+		.vnoifreq_1     = 14,  /* T72_VNOIFREQ_1 */	
+		.vnoifreq_2     = 29, /* T72_VNOIFREQ_2 */	
+		.vnoifreq_3     = 44,  /* T72_VNOIFREQ_3 */	
+		.vnoifreq_4     = 48, /* T72_VNOIFREQ_4 */	
 		.vnoitchapx_0   = 63,  /* T72_VNOITCHAPX_0 */	
 		.vnoitchapx_1   = 63,  /* T72_VNOITCHAPX_1 */	
 		.vnoitchapx_2   = 63,  /* T72_VNOITCHAPX_2 */	
 		.vnoitchapx_3   = 63,  /* T72_VNOITCHAPX_3 */	
 		.vnoitchapx_4   = 63,  /* T72_VNOITCHAPX_4 */	
-		.vnoinotchapx_0 = 63,  /* T72_VNOINOTCHAPX_0 */
-		.vnoinotchapx_1 = 63,  /* T72_VNOINOTCHAPX_1 */
-		.vnoinotchapx_2 = 63,  /* T72_VNOINOTCHAPX_2 */
-		.vnoinotchapx_3 = 63,  /* T72_VNOINOTCHAPX_3 */
-		.vnoinotchapx_4 = 63,  /* T72_VNOINOTCHAPX_4 */
+		.vnoinotchapx_0 = 48,  /* T72_VNOINOTCHAPX_0 */
+		.vnoinotchapx_1 = 48,  /* T72_VNOINOTCHAPX_1 */
+		.vnoinotchapx_2 = 48,  /* T72_VNOINOTCHAPX_2 */
+		.vnoinotchapx_3 = 48,  /* T72_VNOINOTCHAPX_3 */
+		.vnoinotchapx_4 = 48,  /* T72_VNOINOTCHAPX_4 */
 		.reserved_7     = 0,   /* T72_VNOIPC */		
 		.vnoilownlthr   = 15,  /* T72_VNOILOWNLTHR */	
 		.reserved_8     = 0,   /* T72_VNOIHIGHNLTHR */		
@@ -1649,11 +1648,11 @@ static procg_noisesuppression_t72_config_t obj_mxt_charger_t72[TOUCH_MODE_MAX_NU
 		.blknlthr       = 0,   /* T72_BLKNLTHR */		
 		.reserved_2     = 0,   /* T72_RESERVED */		
 		.stabctrl       = 0,   /* T72_STABCTRL */		
-		.stabfreq_0     = 2,  /* T72_STABFREQ_0 */	
-		.stabfreq_1     = 4,  /* T72_STABFREQ_1 */	
-		.stabfreq_2     = 5, /* T72_STABFREQ_2 */	
-		.stabfreq_3     = 7,  /* T72_STABFREQ_3 */	
-		.stabfreq_4     = 11, /* T72_STABFREQ_4 */	
+		.stabfreq_0     = 5,  /* T72_STABFREQ_0 */	
+		.stabfreq_1     = 24,  /* T72_STABFREQ_1 */	
+		.stabfreq_2     = 35, /* T72_STABFREQ_2 */	
+		.stabfreq_3     = 41,  /* T72_STABFREQ_3 */	
+		.stabfreq_4     = 51, /* T72_STABFREQ_4 */	
 		.stabtchapx_0   = 52,  /* T72_STABTCHAPX_0 */	
 		.stabtchapx_1   = 52,  /* T72_STABTCHAPX_1 */	
 		.stabtchapx_2   = 52,  /* T72_STABTCHAPX_2 */	
@@ -1666,44 +1665,44 @@ static procg_noisesuppression_t72_config_t obj_mxt_charger_t72[TOUCH_MODE_MAX_NU
 		.stabnotchapx_4 = 32,   /* T72_STABNOTCHAPX_4 */
 		.reserved_3     = 0,   /* T72_STABPC */		
 		.reserved_4     = 0,   /* T72_STABLOWNLTHR */		
-		.stabhighnlthr  = 8,   /* T72_STABHIGHNLTHR */	
+		.stabhighnlthr  = 12,   /* T72_STABHIGHNLTHR */	
 		.reserved_5     = 0,  /* T72_STABCNT */		
-		.noisctrl       = 1,  /* T72_NOISCTRL */		
-		.noisfreq_0     = 2,  /* T72_NOISFREQ_0 */	
-		.noisfreq_1     = 3,  /* T72_NOISFREQ_1 */	
+		.noisctrl       = 15,  /* T72_NOISCTRL */		
+		.noisfreq_0     = 1,  /* T72_NOISFREQ_0 */	
+		.noisfreq_1     = 2,  /* T72_NOISFREQ_1 */	
 		.noisfreq_2     = 5, /* T72_NOISFREQ_2 */	
 		.noisfreq_3     = 6,  /* T72_NOISFREQ_3 */	
 		.noisfreq_4     = 7, /* T72_NOISFREQ_4 */	
-		.noistchapx_0   = 63,  /* T72_NOISTCHAPX_0 */	
-		.noistchapx_1   = 63,  /* T72_NOISTCHAPX_1 */	
-		.noistchapx_2   = 63,  /* T72_NOISTCHAPX_2 */	
-		.noistchapx_3   = 63,  /* T72_NOISTCHAPX_3 */	
-		.noistchapx_4   = 63,  /* T72_NOISTCHAPX_4 */	
+		.noistchapx_0   = 52,  /* T72_NOISTCHAPX_0 */	
+		.noistchapx_1   = 52,  /* T72_NOISTCHAPX_1 */	
+		.noistchapx_2   = 52,  /* T72_NOISTCHAPX_2 */	
+		.noistchapx_3   = 52,  /* T72_NOISTCHAPX_3 */	
+		.noistchapx_4   = 52,  /* T72_NOISTCHAPX_4 */	
 		.noisnotchapx_0 = 52,  /* T72_NOISNOTCHAPX_0 */
 		.noisnotchapx_1 = 52,  /* T72_NOISNOTCHAPX_1 */
 		.noisnotchapx_2 = 52,  /* T72_NOISNOTCHAPX_2 */
 		.noisnotchapx_3 = 52,  /* T72_NOISNOTCHAPX_3 */
 		.noisnotchapx_4 = 52,   /* T72_NOISNOTCHAPX_4 */
 		.reserved_6     = 0,   /* T72_NOISPC */		
-		.noislownlthr   = 5,   /* T72_NOISLOWNLTHR */	
+		.noislownlthr   = 8,   /* T72_NOISLOWNLTHR */	
 		.noishighnlthr  = 18,  /* T72_NOISHIGHNLTHR */	
 		.noiscnt        = 0,   /* T72_NOISCNT */		
-		.vnoictrl       = 1,  /* T72_VNOICTRL */		
-		.vnoifreq_0     = 3,  /* T72_VNOIFREQ_0 */	
-		.vnoifreq_1     = 5,  /* T72_VNOIFREQ_1 */	
-		.vnoifreq_2     = 7, /* T72_VNOIFREQ_2 */	
-		.vnoifreq_3     = 9,  /* T72_VNOIFREQ_3 */	
-		.vnoifreq_4     = 11, /* T72_VNOIFREQ_4 */	
+		.vnoictrl       = 15,  /* T72_VNOICTRL */		
+		.vnoifreq_0     = 11,  /* T72_VNOIFREQ_0 */	
+		.vnoifreq_1     = 14,  /* T72_VNOIFREQ_1 */	
+		.vnoifreq_2     = 29, /* T72_VNOIFREQ_2 */	
+		.vnoifreq_3     = 44,  /* T72_VNOIFREQ_3 */	
+		.vnoifreq_4     = 48, /* T72_VNOIFREQ_4 */	
 		.vnoitchapx_0   = 63,  /* T72_VNOITCHAPX_0 */	
 		.vnoitchapx_1   = 63,  /* T72_VNOITCHAPX_1 */	
 		.vnoitchapx_2   = 63,  /* T72_VNOITCHAPX_2 */	
 		.vnoitchapx_3   = 63,  /* T72_VNOITCHAPX_3 */	
 		.vnoitchapx_4   = 63,  /* T72_VNOITCHAPX_4 */	
-		.vnoinotchapx_0 = 63,  /* T72_VNOINOTCHAPX_0 */
-		.vnoinotchapx_1 = 63,  /* T72_VNOINOTCHAPX_1 */
-		.vnoinotchapx_2 = 63,  /* T72_VNOINOTCHAPX_2 */
-		.vnoinotchapx_3 = 63,  /* T72_VNOINOTCHAPX_3 */
-		.vnoinotchapx_4 = 63,  /* T72_VNOINOTCHAPX_4 */
+		.vnoinotchapx_0 = 48,  /* T72_VNOINOTCHAPX_0 */
+		.vnoinotchapx_1 = 48,  /* T72_VNOINOTCHAPX_1 */
+		.vnoinotchapx_2 = 48,  /* T72_VNOINOTCHAPX_2 */
+		.vnoinotchapx_3 = 48,  /* T72_VNOINOTCHAPX_3 */
+		.vnoinotchapx_4 = 48,  /* T72_VNOINOTCHAPX_4 */
 		.reserved_7     = 0,   /* T72_VNOIPC */		
 		.vnoilownlthr   = 15,  /* T72_VNOILOWNLTHR */	
 		.reserved_8     = 0,   /* T72_VNOIHIGHNLTHR */		
@@ -1732,61 +1731,61 @@ static procg_noisesuppression_t72_config_t obj_mxt_charger_t72[TOUCH_MODE_MAX_NU
 		.blknlthr       = 0,   /* T72_BLKNLTHR */		
 		.reserved_2     = 0,   /* T72_RESERVED */		
 		.stabctrl       = 0,   /* T72_STABCTRL */		
-		.stabfreq_0     = 2,  /* T72_STABFREQ_0 */	
-		.stabfreq_1     = 4,  /* T72_STABFREQ_1 */	
-		.stabfreq_2     = 5, /* T72_STABFREQ_2 */	
-		.stabfreq_3     = 7,  /* T72_STABFREQ_3 */	
-		.stabfreq_4     = 11, /* T72_STABFREQ_4 */	
-		.stabtchapx_0   = 32,  /* T72_STABTCHAPX_0 */	
-		.stabtchapx_1   = 32,  /* T72_STABTCHAPX_1 */	
-		.stabtchapx_2   = 32,  /* T72_STABTCHAPX_2 */	
-		.stabtchapx_3   = 32,  /* T72_STABTCHAPX_3 */	
-		.stabtchapx_4   = 32,  /* T72_STABTCHAPX_4 */	
-		.stabnotchapx_0 = 24,  /* T72_STABNOTCHAPX_0 */
-		.stabnotchapx_1 = 24,  /* T72_STABNOTCHAPX_1 */
-		.stabnotchapx_2 = 24,  /* T72_STABNOTCHAPX_2 */
-		.stabnotchapx_3 = 24,  /* T72_STABNOTCHAPX_3 */
-		.stabnotchapx_4 = 24,   /* T72_STABNOTCHAPX_4 */
+		.stabfreq_0     = 5,  /* T72_STABFREQ_0 */	
+		.stabfreq_1     = 24,  /* T72_STABFREQ_1 */	
+		.stabfreq_2     = 35, /* T72_STABFREQ_2 */	
+		.stabfreq_3     = 41,  /* T72_STABFREQ_3 */	
+		.stabfreq_4     = 51, /* T72_STABFREQ_4 */	
+		.stabtchapx_0   = 40,  /* T72_STABTCHAPX_0 */	
+		.stabtchapx_1   = 40,  /* T72_STABTCHAPX_1 */	
+		.stabtchapx_2   = 40,  /* T72_STABTCHAPX_2 */	
+		.stabtchapx_3   = 40,  /* T72_STABTCHAPX_3 */	
+		.stabtchapx_4   = 40,  /* T72_STABTCHAPX_4 */	
+		.stabnotchapx_0 = 40,  /* T72_STABNOTCHAPX_0 */
+		.stabnotchapx_1 = 40,  /* T72_STABNOTCHAPX_1 */
+		.stabnotchapx_2 = 40,  /* T72_STABNOTCHAPX_2 */
+		.stabnotchapx_3 = 40,  /* T72_STABNOTCHAPX_3 */
+		.stabnotchapx_4 = 40,   /* T72_STABNOTCHAPX_4 */
 		.reserved_3     = 0,   /* T72_STABPC */		
 		.reserved_4     = 0,   /* T72_STABLOWNLTHR */		
-		.stabhighnlthr  = 8,   /* T72_STABHIGHNLTHR */	
+		.stabhighnlthr  = 12,   /* T72_STABHIGHNLTHR */	
 		.reserved_5     = 0,  /* T72_STABCNT */		
-		.noisctrl       = 1,  /* T72_NOISCTRL */		
-		.noisfreq_0     = 2,  /* T72_NOISFREQ_0 */	
-		.noisfreq_1     = 3,  /* T72_NOISFREQ_1 */	
+		.noisctrl       = 15,  /* T72_NOISCTRL */		
+		.noisfreq_0     = 1,  /* T72_NOISFREQ_0 */	
+		.noisfreq_1     = 2,  /* T72_NOISFREQ_1 */	
 		.noisfreq_2     = 5, /* T72_NOISFREQ_2 */	
 		.noisfreq_3     = 6,  /* T72_NOISFREQ_3 */	
 		.noisfreq_4     = 7, /* T72_NOISFREQ_4 */	
-		.noistchapx_0   = 63,  /* T72_NOISTCHAPX_0 */	
-		.noistchapx_1   = 63,  /* T72_NOISTCHAPX_1 */	
-		.noistchapx_2   = 63,  /* T72_NOISTCHAPX_2 */	
-		.noistchapx_3   = 63,  /* T72_NOISTCHAPX_3 */	
-		.noistchapx_4   = 63,  /* T72_NOISTCHAPX_4 */	
+		.noistchapx_0   = 52,  /* T72_NOISTCHAPX_0 */	
+		.noistchapx_1   = 52,  /* T72_NOISTCHAPX_1 */	
+		.noistchapx_2   = 52,  /* T72_NOISTCHAPX_2 */	
+		.noistchapx_3   = 52,  /* T72_NOISTCHAPX_3 */	
+		.noistchapx_4   = 52,  /* T72_NOISTCHAPX_4 */	
 		.noisnotchapx_0 = 52,  /* T72_NOISNOTCHAPX_0 */
 		.noisnotchapx_1 = 52,  /* T72_NOISNOTCHAPX_1 */
 		.noisnotchapx_2 = 52,  /* T72_NOISNOTCHAPX_2 */
 		.noisnotchapx_3 = 52,  /* T72_NOISNOTCHAPX_3 */
 		.noisnotchapx_4 = 52,   /* T72_NOISNOTCHAPX_4 */
 		.reserved_6     = 0,   /* T72_NOISPC */		
-		.noislownlthr   = 5,   /* T72_NOISLOWNLTHR */	
+		.noislownlthr   = 8,   /* T72_NOISLOWNLTHR */	
 		.noishighnlthr  = 18,  /* T72_NOISHIGHNLTHR */	
 		.noiscnt        = 0,   /* T72_NOISCNT */		
-		.vnoictrl       = 1,  /* T72_VNOICTRL */		
-		.vnoifreq_0     = 3,  /* T72_VNOIFREQ_0 */	
-		.vnoifreq_1     = 5,  /* T72_VNOIFREQ_1 */	
-		.vnoifreq_2     = 7, /* T72_VNOIFREQ_2 */	
-		.vnoifreq_3     = 9,  /* T72_VNOIFREQ_3 */	
-		.vnoifreq_4     = 11, /* T72_VNOIFREQ_4 */	
+		.vnoictrl       = 15,  /* T72_VNOICTRL */		
+		.vnoifreq_0     = 11,  /* T72_VNOIFREQ_0 */	
+		.vnoifreq_1     = 14,  /* T72_VNOIFREQ_1 */	
+		.vnoifreq_2     = 29, /* T72_VNOIFREQ_2 */	
+		.vnoifreq_3     = 44,  /* T72_VNOIFREQ_3 */	
+		.vnoifreq_4     = 48, /* T72_VNOIFREQ_4 */	
 		.vnoitchapx_0   = 63,  /* T72_VNOITCHAPX_0 */	
 		.vnoitchapx_1   = 63,  /* T72_VNOITCHAPX_1 */	
 		.vnoitchapx_2   = 63,  /* T72_VNOITCHAPX_2 */	
 		.vnoitchapx_3   = 63,  /* T72_VNOITCHAPX_3 */	
 		.vnoitchapx_4   = 63,  /* T72_VNOITCHAPX_4 */	
-		.vnoinotchapx_0 = 63,  /* T72_VNOINOTCHAPX_0 */
-		.vnoinotchapx_1 = 63,  /* T72_VNOINOTCHAPX_1 */
-		.vnoinotchapx_2 = 63,  /* T72_VNOINOTCHAPX_2 */
-		.vnoinotchapx_3 = 63,  /* T72_VNOINOTCHAPX_3 */
-		.vnoinotchapx_4 = 63,  /* T72_VNOINOTCHAPX_4 */
+		.vnoinotchapx_0 = 48,  /* T72_VNOINOTCHAPX_0 */
+		.vnoinotchapx_1 = 48,  /* T72_VNOINOTCHAPX_1 */
+		.vnoinotchapx_2 = 48,  /* T72_VNOINOTCHAPX_2 */
+		.vnoinotchapx_3 = 48,  /* T72_VNOINOTCHAPX_3 */
+		.vnoinotchapx_4 = 48,  /* T72_VNOINOTCHAPX_4 */
 		.reserved_7     = 0,   /* T72_VNOIPC */		
 		.vnoilownlthr   = 15,  /* T72_VNOILOWNLTHR */	
 		.reserved_8     = 0,   /* T72_VNOIHIGHNLTHR */		
@@ -1929,14 +1928,14 @@ static proci_retransmissioncompensation_t80_config_t obj_retransmissioncompensat
 		.compgain	  = 70,	 /* T80_COMPGAIN */
 		.targetdelta  = 150,	 /* T78_TARGETDELTA */
 		.compthr	  = 0,	 /* T80_COMPTHR */
-		.atchthr      = 0,	 /* T80_RESERVED[0]*/
+		.atchthr      = 5,	 /* T80_RESERVED[0]*/
 		.moistcfg     = 0,	 /* T80_RESERVED[1] */
 		.moistdto     = 0,	 /* T80_RESERVED[2] */
 	},
 	{
 		.ctrl         = 13,  /* T80_CTRL */
 		.compgain	  = 70,	 /* T80_COMPGAIN */
-		.targetdelta  = 150,	 /* T78_TARGETDELTA */
+		.targetdelta  = 200,	 /* T78_TARGETDELTA */
 		.compthr	  = 0,	 /* T80_COMPTHR */
 		.atchthr      = 0,	 /* T80_RESERVED[0]*/
 		.moistcfg     = 0,	 /* T80_RESERVED[1] */
@@ -1948,7 +1947,7 @@ static proci_retransmissioncompensation_t80_config_t obj_retransmissioncompensat
 		.compgain	  = 70,	 /* T80_COMPGAIN */
 		.targetdelta  = 150,	 /* T78_TARGETDELTA */
 		.compthr	  = 0,	 /* T80_COMPTHR */
-		.atchthr      = 0,	 /* T80_RESERVED[0]*/
+		.atchthr      = 5,	 /* T80_RESERVED[0]*/
 		.moistcfg     = 0,	 /* T80_RESERVED[1] */
 		.moistdto     = 0,	 /* T80_RESERVED[2] */
 
@@ -1998,8 +1997,8 @@ static proci_gesturepocessor_t84_config_t obj_gesturepocessor_t84[TOUCH_MODE_MAX
 static touch_multitouchscreen_t100_config_t obj_multi_touch_t100[TOUCH_MODE_MAX_NUM] = {
 	//	Mode - 0
 	{
-		.ctrl         = 131,  /* T100_CTRL */
-		.cfg1         = 32,  /* T100_CFG1 */
+		.ctrl         = 135,   /* T100_CTRL */
+		.cfg1         = 36,   /* T100_CFG1 */
 		.scraux       = 0,	   /* T100_SCRAUX */
 		.tchaux       = 4,	   /* T100_TCHAUX */
 		.tcheventcfg  = 0,	   /* T100_TCHEVENTCFG */
@@ -2026,33 +2025,33 @@ static touch_multitouchscreen_t100_config_t obj_multi_touch_t100[TOUCH_MODE_MAX_
 		.yedgedist    = 60,	   /* T100_YEDGEDIST */
 		.gain         = 9,	   /* T100_GAIN */
 		.dxgain       = 6,	   /* T100_DXGAIN */
-		.tchthr       = 80,	   /* T100_TCHTHR */
-		.tchhyst      = 15,	   /* T100_TCHHYST */
-		.intthr       = 40,	   /* T100_INTTHR */
+		.tchthr       = 120,	   /* T100_TCHTHR */
+		.tchhyst      = 30,	   /* T100_TCHHYST */
+		.intthr       = 70,	   /* T100_INTTHR */
 		.noisesf      = 0,	   /* T100_NOISESF */
 		.cutoffthr    = 0,	   /* T100_CUTOFFTHR */
-		.mrgthr       = 100,	/* T100_MRGTHR */
-		.mrgthradjstr = 150,	   /* T100_MRGTHRADJSTR */
-		.mrghyst      = 30,	   /* T100_MRGHYST */
+		.mrgthr       = 120,	/* T100_MRGTHR */
+		.mrgthradjstr = 130,	   /* T100_MRGTHRADJSTR */
+		.mrghyst      = 50,	   /* T100_MRGHYST */
 		.dxthrsf      = 90,	   /* T100_DXTHRSF */
 		.tchdidown    = 1,	   /* T100_TCHDIDOWN */
 		.tchdiup      = 1,	   /* T100_TCHDIUP */
 		.nexttchdi    = 1,	   /* T100_NEXTTCHDI */
 		.reserved     = 0,	   /* T100_RESERVED */
 		.jumplimit    = 8,	   /* T100_JUMPLIMIT */
-		.movfilter    = 4,	   /* T100_MOVFILTER */
-		.movsmooth    = 50,   /* T100_MOVSMOOTH */
+		.movfilter    = 3,	   /* T100_MOVFILTER */
+		.movsmooth    = 68,   /* T100_MOVSMOOTH */
 		.movpred      = 64,	   /* T100_MOVPRED */
 		.movhysti     = 25,	   /* T100_MOVHYSTI */
 		.movhystn     = 15,	   /* T100_MOVHYSTN */
 		.amplhyst     = 0,	   /* T100_AMPLHYST */
 		.scrareahyst  = 0,	   /* T100_SCRAREAHYST */
-		.intthrhyst   = 10,   /* T100_INTTHRHYST */
+		.intthrhyst   = 20,   /* T100_INTTHRHYST */
 	},
 	//	Mode - 1
 	{
-		.ctrl         = 131,   /* T100_CTRL */
-		.cfg1         = 32,   /* T100_CFG1 */
+		.ctrl         = 135,   /* T100_CTRL */
+		.cfg1         = 36,   /* T100_CFG1 */
 		.scraux       = 0,	   /* T100_SCRAUX */
 		.tchaux       = 4,	   /* T100_TCHAUX */
 		.tcheventcfg  = 0,	   /* T100_TCHEVENTCFG */
@@ -2108,8 +2107,8 @@ static touch_multitouchscreen_t100_config_t obj_multi_touch_t100[TOUCH_MODE_MAX_
 	},
 	//	Mode - 2
 	{
-		.ctrl         = 131,   /* T100_CTRL */
-		.cfg1         = 32,   /* T100_CFG1 */
+		.ctrl         = 135,   /* T100_CTRL */
+		.cfg1         = 36,   /* T100_CFG1 */
 		.scraux       = 0,	   /* T100_SCRAUX */
 		.tchaux       = 4,	   /* T100_TCHAUX */
 		.tcheventcfg  = 0,	   /* T100_TCHEVENTCFG */
@@ -2161,7 +2160,7 @@ static touch_multitouchscreen_t100_config_t obj_multi_touch_t100[TOUCH_MODE_MAX_
 	},
 	//	Mode - 3
 	{
-		.ctrl         = 131,   /* T100_CTRL */
+		.ctrl         = 143,   /* T100_CTRL */
 		.cfg1         = 36,   /* T100_CFG1 */
 		.scraux       = 0,	   /* T100_SCRAUX */
 		.tchaux       = 0,	   /* T100_TCHAUX */
